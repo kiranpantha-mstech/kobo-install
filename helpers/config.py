@@ -1668,7 +1668,7 @@ class Config(metaclass=Singleton):
         self.__dict["digital_subdomain"] = CLI.colored_input(
             "Digital Profile sub domain name",
             CLI.COLOR_SUCCESS,
-            self.__config.get("digital_subdomain", "")
+            self.__dict.get("digital_subdomain", "")
         )
 
         parts = self.__dict['public_domain_name'].split('.')
