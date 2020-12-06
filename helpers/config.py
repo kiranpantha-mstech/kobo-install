@@ -321,6 +321,7 @@ class Config(metaclass=Singleton):
             'django_secret_key': binascii.hexlify(os.urandom(50)).decode(),
             'docker_prefix': '',
             'ee_subdomain': 'ee',
+            'digita_subdomain': 'digital',
             'enketo_api_token': binascii.hexlify(os.urandom(60)).decode(),
             'enketo_encryption_key': binascii.hexlify(os.urandom(60)).decode(),
             # default value from enketo. Because it was not customizable before
@@ -1663,6 +1664,11 @@ class Config(metaclass=Singleton):
             'Enketo Express sub domain name?',
             CLI.COLOR_QUESTION,
             self.__dict['ee_subdomain']
+        )
+        self.__dict["digital_subdomain"] = CLI.colored_input(
+            "Digital Profile sub domain name",
+            CLI.COLOR_SUCCESS,
+            self.__config.get("digital_subdomain", "")
         )
 
         parts = self.__dict['public_domain_name'].split('.')
