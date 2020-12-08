@@ -321,7 +321,7 @@ class Config(metaclass=Singleton):
             'django_secret_key': binascii.hexlify(os.urandom(50)).decode(),
             'docker_prefix': '',
             'ee_subdomain': 'ee',
-            'digita_subdomain': 'digital',
+            'digital_subdomain': 'digital',
             'enketo_api_token': binascii.hexlify(os.urandom(60)).decode(),
             'enketo_encryption_key': binascii.hexlify(os.urandom(60)).decode(),
             # default value from enketo. Because it was not customizable before
