@@ -136,11 +136,13 @@ class Setup:
             routes = '{ip_address}  ' \
                      '{kpi_subdomain}.{public_domain_name} ' \
                      '{kc_subdomain}.{public_domain_name} ' \
+                     '{dp_subdomain}.{public_domain_name} ' \
                      '{ee_subdomain}.{public_domain_name}'.format(
                         ip_address=dict_['local_interface_ip'],
                         public_domain_name=dict_['public_domain_name'],
                         kpi_subdomain=dict_['kpi_subdomain'],
                         kc_subdomain=dict_['kc_subdomain'],
+                        dp_subdomain="digital",
                         ee_subdomain=dict_['ee_subdomain']
                      )
 
